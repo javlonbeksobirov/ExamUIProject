@@ -4,16 +4,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.b12game.examproject.R
+import com.b12game.examproject.fragments.CollectionPageFragment
 import com.b12game.examproject.fragments.HomePageFragment
 import com.b12game.examproject.fragments.MessagePageFragment
+import com.b12game.examproject.fragments.SearchPageFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
     private val homePageFragment = HomePageFragment()
-//    private val collectionPageFragment = CollectionPageFragment()
+    private val collectionPageFragment = CollectionPageFragment()
     private val messagePageFragment = MessagePageFragment()
-//    private val searchPageFragment = SearchPageFragment()
+    private val searchPageFragment = SearchPageFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +33,9 @@ class MainActivity : AppCompatActivity() {
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.nav_home -> replaceFragment(homePageFragment)
-//                R.id.nav_collection -> replaceFragment(collectionPageFragment)
+                R.id.nav_collection -> replaceFragment(collectionPageFragment)
                 R.id.nav_message -> replaceFragment(messagePageFragment)
-//                R.id.nav_search -> replaceFragment(searchPageFragment)
+                R.id.nav_search -> replaceFragment(searchPageFragment)
 
             }
             true
