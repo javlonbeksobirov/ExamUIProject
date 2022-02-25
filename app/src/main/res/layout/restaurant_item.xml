@@ -1,6 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+
+          <ImageView
+              android:id="@+id/restaurant_item_image"
+              android:layout_width="200dp"
+              android:layout_height="200dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/im_10"
+              />
+
+          <TextView
+              android:layout_marginTop="10dp"
+              android:id="@+id/restaurant_item_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Title"
+              android:textColor="@color/black"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              android:gravity="center"
+              />
+
+          <TextView
+              android:id="@+id/tv_restaraunt_item_description"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Ooo delicios"
+              android:textSize="14sp"
+              android:textColor="#cbcbcb"
+              />
+      </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_24"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_24"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_24"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_24"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_24"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

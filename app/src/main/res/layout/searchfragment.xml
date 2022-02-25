@@ -2,48 +2,72 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        app:elevation="0dp">
-
-        <androidx.appcompat.widget.Toolbar
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Search"
-            app:titleTextColor="#000000">
+            android:background="#ffffff"
+            app:elevation="0dp">
 
-
-            <LinearLayout
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingRight="16dp">
+                android:layout_height="wrap_content"
+                app:title="Search"
+                app:titleTextColor="#000000">
 
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical|center_horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="16dp">
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:hint="search"
-                        android:textColorHint="#cbcbcb"
-                        android:drawableStart="@drawable/ic_outline_search_24"
-                        android:drawableEnd="@drawable/ic_baseline_clear_24"
-                        android:background="@drawable/edittext_corner"
-                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center_horizontal">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="search"
+                            android:textColorHint="#cbcbcb"
+                            android:drawableStart="@drawable/ic_outline_search_24"
+                            android:drawableEnd="@drawable/ic_baseline_clear_24"
+                            android:background="@drawable/edittext_corner"
+                            />
+                    </LinearLayout>
+
                 </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
 
-            </LinearLayout>
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cbcbcb"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_contact_message"
+            />
+    </LinearLayout>
+
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
