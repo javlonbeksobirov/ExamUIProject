@@ -26,12 +26,12 @@ class IntroActivty : AppCompatActivity() {
         viewPager2 = findViewById(R.id.viewPager2)
         viewPager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         refreshAdapter(addProduct())
-//        btn_done = findViewById(R.id.btn_done)
-//        btn_done.setOnClickListener {
-//            SharedPref(this).isSaved = true
-//            var intent = Intent(this,MainActivity::class.java)
-//            startActivity(intent)
-//        }
+        btn_done = findViewById(R.id.btn_done)
+        btn_done.setOnClickListener {
+            SharedPref(this).isSaved = true
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun refreshAdapter(product: ArrayList<IntroModel>) {

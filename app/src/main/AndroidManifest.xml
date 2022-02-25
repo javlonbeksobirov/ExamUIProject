@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamProject">
         <activity
-            android:name=".activity.IntroActivty"
+            android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             android:name=".activity.MainActivity" />
 
         <activity
-            android:name=".activity.SplashActivity"/>
+            android:name=".activity.IntroActivty"/>
     </application>
 
 </manifest>
